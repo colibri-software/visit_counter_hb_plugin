@@ -1,0 +1,10 @@
+
+%li.string.input
+  %label.label{ :name => 'my_plugin_config' } My Plugin Config
+  %input.string{ :type => 'text', :name => 'my_plugin_config' }
+%li.input
+  %label.label{ :name => 'content_type_slugs' } Content Types
+  %select.select{ :name => 'content_type_slugs', :multiple => 'multiple' }
+    {{#each content_types}}
+    %option{ :value => '{{ this.slug }}' } {{ this.name }}
+    {{/each}}
