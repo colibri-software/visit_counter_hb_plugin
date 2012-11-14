@@ -9,12 +9,16 @@ module VisitCounter
 
     include Locomotive::Plugin
 
-    embeds_one :count_model, :class_name => 'VisitCounter::Count'
+    has_one :counter, VisitCounter::Count
 
     before_filter :increment_count
 
+    def initialize_plugin
+      build_counter unless counter
+    end
+
     def increment_count
-      find_or_build_count_model.count += 1
+      counter.increment!
     end
 
     def to_liquid
@@ -22,13 +26,7 @@ module VisitCounter
     end
 
     def count
-      find_or_build_count_model.count
-    end
-
-    protected
-
-    def find_or_build_count_model
-      count_model ||= count_model.build
+      counter.count
     end
 
   end

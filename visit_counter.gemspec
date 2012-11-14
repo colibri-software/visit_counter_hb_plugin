@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.summary     = "Locomotive plugin for counting the number of visits to the site"
   s.description = "This plugin stores the number of visits to the site. This can be viewed by the site owner, or displayed on a public page."
 
-  s.add_dependency 'locomotive_plugins',    '~> 0.2.0.alpha'
+  s.add_dependency 'locomotive_plugins',    '~> 0.2.1'
 
   s.required_rubygems_version = ">= 1.3.6"
 
