@@ -1,6 +1,8 @@
 
 module VisitCounter
-  class Count < Locomotive::Plugin::DBModel
+  class Count
+    include Mongoid::Document
+
     field :page_fullpath
     field :count, type: Integer, default: 0
 
@@ -9,6 +11,7 @@ module VisitCounter
 
     def increment!
       self.count += 1
+      self.save!
     end
   end
 end

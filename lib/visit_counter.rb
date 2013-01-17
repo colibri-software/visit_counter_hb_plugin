@@ -10,8 +10,6 @@ module VisitCounter
 
     include Locomotive::Plugin
 
-    has_many :counters, Count
-
     before_filter :increment_page_count
 
     def increment_page_count
@@ -27,19 +25,17 @@ module VisitCounter
     end
 
     def site_count
-      counters.sum(:count)
+      Count.sum(:count).to_i
     end
 
     protected
 
     def counter_for_current_page
       path = @controller.params[:path] || 'index'
-      counters.where(:page_fullpath => path).first \
-        || counters.build(:page_fullpath => path)
+      Count.where(:page_fullpath => path).first \
+        || Count.new(:page_fullpath => path)
     end
 
   end
-
-  LocomotivePlugins.register_plugin(VisitCounter)
 
 end
