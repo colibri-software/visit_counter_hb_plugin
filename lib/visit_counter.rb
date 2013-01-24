@@ -1,6 +1,4 @@
-
-require 'rubygems'
-require 'bundler/setup'
+require 'visit_counter/engine'
 
 require 'visit_counter/count'
 require 'visit_counter/visit_counter_drop'
