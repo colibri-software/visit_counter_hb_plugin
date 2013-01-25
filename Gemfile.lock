@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     visit_counter (0.0.1)
-      locomotive_plugins (= 1.0.0.beta5)
+      locomotive_plugins (= 1.0.0.beta7)
       rails (~> 3.2.11)
 
 GEM
@@ -50,7 +50,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.7.6)
     locomotive_liquid (2.4.2)
-    locomotive_plugins (1.0.0.beta5)
+    locomotive_plugins (1.0.0.beta7)
       bson_ext
       haml (~> 3.1)
       locomotive_liquid (~> 2.4)

@@ -26,6 +26,10 @@ module VisitCounter
       Count.sum(:count).to_i
     end
 
+    def self.rack_app
+      Engine
+    end
+
     protected
 
     def counter_for_current_page

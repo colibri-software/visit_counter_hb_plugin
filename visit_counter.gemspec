@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.11"
 
-  s.add_dependency 'locomotive_plugins',    '1.0.0.beta5'
+  s.add_dependency 'locomotive_plugins',    '1.0.0.beta7'
 
   s.required_rubygems_version = ">= 1.3.6"
 
