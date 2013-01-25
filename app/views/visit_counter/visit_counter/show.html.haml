@@ -1,0 +1,7 @@
+
+%h1 VisitCounter Management
+
+%p== Number of visits: #{@count}
+
+= form_tag reset_count_path, method: 'put' do
+  = submit_tag('Reset')

@@ -1,14 +1,8 @@
 
 VisitCounter::Engine.routes.draw do
 
-  get "visit_counter/show"
+  get '/' => 'visit_counter/visit_counter#show', as: 'show_count'
 
-  get "visit_counter/update"
-
-  match('/path', to: Proc.new do
-
-    [200, {}, ['From rails engine!!!']]
-
-  end)
+  put 'reset' => 'visit_counter/visit_counter#reset', as: 'reset_count'
 
 end
