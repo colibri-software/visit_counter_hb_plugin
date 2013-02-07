@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.description = "This plugin stores the number of visits to the site. This can be viewed by the site owner, or displayed on a public page."
 
   s.add_dependency 'rails',                     '~> 3.2.11'
-  s.add_dependency 'locomotive_plugins',        '1.0.0.beta7'
+  s.add_dependency 'locomotive_plugins',        '1.0.0.beta9'
 
   s.add_development_dependency 'rspec-rails',   '~> 2.0'
 
