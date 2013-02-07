@@ -3,7 +3,7 @@ require_dependency "visit_counter/application_controller"
 module VisitCounter
   class VisitCounterController < ApplicationController
     def show
-      @plugin_object = request.env[:plugin_object]
+      @plugin_object = Engine.plugin_object
       @count = @plugin_object.site_count
     end
 
