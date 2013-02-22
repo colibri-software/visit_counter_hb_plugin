@@ -18,6 +18,14 @@ module VisitCounter
       @drop ||= VisitCounterDrop.new(self)
     end
 
+    def rack_app
+      Engine
+    end
+
+    def config_template_file
+      File.join(File.dirname(__FILE__), 'visit_counter', 'config.haml')
+    end
+
     def page_count
       counter_for_current_page.count
     end
@@ -26,8 +34,10 @@ module VisitCounter
       Count.sum(:count).to_i
     end
 
-    def self.rack_app
-      Engine
+    def show_count_link
+      path = Engine.routes.url_helpers.show_count_path
+      puts "Helpers: #{path}"
+      rack_app_full_path(path)
     end
 
     protected

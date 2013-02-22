@@ -1,0 +1,8 @@
+%html
+  %head
+    %title VisitCounter
+    - unless @stylesheet.nil? || @stylesheet.empty?
+      = stylesheet_link_tag @stylesheet
+    = csrf_meta_tags
+  %body
+    = yield

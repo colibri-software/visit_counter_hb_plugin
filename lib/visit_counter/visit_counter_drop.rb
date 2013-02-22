@@ -2,7 +2,7 @@
 module VisitCounter
   class VisitCounterDrop < ::Liquid::Drop
 
-    delegate :page_count, :site_count, to: :source
+    delegate :page_count, :site_count, :show_count_link, to: :source
 
     def initialize(source)
       @source = source
