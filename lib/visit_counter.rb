@@ -8,7 +8,7 @@ module VisitCounter
 
     include Locomotive::Plugin
 
-    before_filter :increment_page_count
+    before_page_render :increment_page_count
 
     def increment_page_count
       counter_for_current_page.increment!
