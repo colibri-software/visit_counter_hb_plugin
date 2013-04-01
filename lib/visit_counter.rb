@@ -18,7 +18,7 @@ module VisitCounter
       @drop ||= VisitCounterDrop.new(self)
     end
 
-    def rack_app
+    def self.rack_app
       Engine
     end
 
@@ -35,9 +35,7 @@ module VisitCounter
     end
 
     def show_count_link
-      path = Engine.routes.url_helpers.show_count_path
-      puts "Helpers: #{path}"
-      rack_app_full_path(path)
+      Engine.routes.url_helpers.show_count_path
     end
 
     protected
