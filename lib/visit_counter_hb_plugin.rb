@@ -1,10 +1,10 @@
-require 'visit_counter/engine'
+require 'visit_counter_hb_plugin/engine'
 
-require 'visit_counter/count'
-require 'visit_counter/visit_counter_drop'
+require 'visit_counter_hb_plugin/count'
+require 'visit_counter_hb_plugin/visit_counter_drop'
 
-module VisitCounter
-  class VisitCounter
+module VisitCounterHBPlugin
+  class VisitCounterHBPlugin
 
     include Locomotive::Plugin
 
@@ -15,7 +15,7 @@ module VisitCounter
     end
 
     def to_liquid
-      @drop ||= VisitCounterDrop.new(self)
+      @drop ||= VisitCounterHBPluginDrop.new(self)
     end
 
     def self.rack_app
@@ -23,7 +23,7 @@ module VisitCounter
     end
 
     def config_template_file
-      File.join(File.dirname(__FILE__), 'visit_counter', 'config.haml')
+      File.join(File.dirname(__FILE__), 'visit_counter_hb_plugin', 'config.haml')
     end
 
     def page_count

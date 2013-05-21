@@ -1,6 +1,6 @@
 
-module VisitCounter
-  class VisitCounterDrop < ::Liquid::Drop
+module VisitCounterHBPlugin
+  class VisitCounterHBPluginDrop < ::Liquid::Drop
 
     delegate :page_count, :site_count, :show_count_link, to: :source
 

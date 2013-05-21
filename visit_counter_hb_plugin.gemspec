@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 
-require 'visit_counter/version'
+require 'visit_counter_hb_plugin/version'
 
 Gem::Specification.new do |s|
-  s.name        = "visit_counter"
-  s.version     = VisitCounter::VERSION
+  s.name        = "visit_counter_hb_plugin"
+  s.version     = VisitCounterHBPlugin::VERSION
   s.platform    = Gem::Platform::RUBY
 
   s.authors     = ["Colibri Software"]
