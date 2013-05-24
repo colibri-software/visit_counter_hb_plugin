@@ -1,5 +1,5 @@
-module VisitCounterHBPlugin
+module VisitCounterHbPlugin
   class Engine < ::Rails::Engine
-    isolate_namespace VisitCounterHBPlugin
+    isolate_namespace VisitCounterHbPlugin
   end
 end

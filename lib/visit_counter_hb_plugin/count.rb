@@ -1,5 +1,5 @@
 
-module VisitCounterHBPlugin
+module VisitCounterHbPlugin
   class Count
     include Mongoid::Document
 

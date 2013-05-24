@@ -1,4 +1,4 @@
-module VisitCounterHBPlugin
+module VisitCounterHbPlugin
   class ApplicationController < ActionController::Base
 
     before_filter :set_layout_variables

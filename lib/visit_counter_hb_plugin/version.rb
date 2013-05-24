@@ -1,4 +1,4 @@
 
-module VisitCounterHBPlugin
+module VisitCounterHbPlugin
   VERSION = '1.0.0.rc2'
 end

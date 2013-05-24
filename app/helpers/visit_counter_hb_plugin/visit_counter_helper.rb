@@ -1,4 +1,4 @@
-module VisitCounterHBPlugin
-  module VisitCounterHBPluginHelper
+module VisitCounterHbPlugin
+  module VisitCounterHbPluginHelper
   end
 end

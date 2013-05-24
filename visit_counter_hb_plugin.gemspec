@@ -5,7 +5,7 @@ require 'visit_counter_hb_plugin/version'
 
 Gem::Specification.new do |s|
   s.name        = "visit_counter_hb_plugin"
-  s.version     = VisitCounterHBPlugin::VERSION
+  s.version     = VisitCounterHbPlugin::VERSION
   s.platform    = Gem::Platform::RUBY
 
   s.authors     = ["Colibri Software"]

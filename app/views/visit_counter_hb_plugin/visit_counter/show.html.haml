@@ -1,4 +1,4 @@
-%h1 VisitCounterHBPlugin Management
+%h1 VisitCounterHbPlugin Management
 .visits
   %h2 Visits
   %h3== Entire Site: #{@count}
@@ -7,5 +7,5 @@
     %p== #{page}: #{count}
 .actions
   %h2 Reset
-  = form_tag ::VisitCounterHBPlugin::Engine.full_path('/reset'), method: 'put' do
+  = form_tag ::VisitCounterHbPlugin::Engine.full_path('/reset'), method: 'put' do
     = submit_tag('Reset')

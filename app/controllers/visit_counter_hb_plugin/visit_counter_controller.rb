@@ -1,7 +1,7 @@
 require_dependency "visit_counter_hb_plugin/application_controller"
 
-module VisitCounterHBPlugin
-  class VisitCounterHBPluginController < ApplicationController
+module VisitCounterHbPlugin
+  class VisitCounterHbPluginController < ApplicationController
     def show
       @plugin_object = Engine.plugin_object
       @count = @plugin_object.site_count

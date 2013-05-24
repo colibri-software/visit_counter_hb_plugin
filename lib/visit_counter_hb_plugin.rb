@@ -3,8 +3,8 @@ require 'visit_counter_hb_plugin/engine'
 require 'visit_counter_hb_plugin/count'
 require 'visit_counter_hb_plugin/visit_counter_drop'
 
-module VisitCounterHBPlugin
-  class VisitCounterHBPlugin
+module VisitCounterHbPlugin
+  class VisitCounterHbPlugin
 
     include Locomotive::Plugin
 
@@ -15,7 +15,7 @@ module VisitCounterHBPlugin
     end
 
     def to_liquid
-      @drop ||= VisitCounterHBPluginDrop.new(self)
+      @drop ||= VisitCounterHbPluginDrop.new(self)
     end
 
     def self.rack_app

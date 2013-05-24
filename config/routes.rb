@@ -1,5 +1,5 @@
 
-VisitCounterHBPlugin::Engine.routes.draw do
+VisitCounterHbPlugin::Engine.routes.draw do
 
   get '/' => 'visit_counter_hb_plugin/visit_counter#show', as: 'show_count'
 
