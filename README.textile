@@ -22,7 +22,7 @@ h3. Configuring Plugin
 
 This plugin provides on configuration option:
 
-* Stylesheet for Engine - allow you to enter teh URL of a style sheet to be loaded by the engine
+* Stylesheet for Engine - allow you to enter the URL of a stylesheet to be loaded by the engine
 
 The congfig window also has a link to the engine
 
