@@ -10,6 +10,10 @@ module VisitCounterHbPlugin
 
     before_page_render :increment_page_count
 
+    def self.default_plugin_id
+      'visit_counter'
+    end
+
     def increment_page_count
       counter_for_current_page.increment!
     end

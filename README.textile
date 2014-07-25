@@ -1,0 +1,40 @@
+h1. Visit Counter Plugin
+
+This is a plugin for LocomotiveCMS. It is a very simple plugin that will allow you to put a visit counter on your website
+
+h2. Installation
+
+To use this plugin you must be using a version of LocomotiveCMS that has the plugins feature designed by "Colibri Software":https://www.colibri-software.com. You can do this by making the followign changes to the Gemfile in you app:
+
+* Remove or comment out the following line:
+@gem 'locomotive_cms', '~> 2.X.X', require: 'locomotive/engine'@
+* Add the following line:
+@gem 'locomotive_cms', require: 'locomotive/engine', git: 'https://github.com/colibri-software/locomotive_engine.git', branch: 'plugins'@
+
+Then add the following lines in your Gemfile to include the plugin:
+<pre><code>group :locomotive_plugins do
+  gem 'visit_counter_hb_plugin', git: https://github.com/colibri-software/visit_counter_hb_plugin.git'
+end</code></pre>
+
+h2. Usage
+
+h3. Configuring Plugin
+
+This plugin provides on configuration option:
+
+* Stylesheet for Engine - allow you to enter teh URL of a style sheet to be loaded by the engine
+
+The congfig window also has a link to the engine
+
+h3. Liquid Drops
+
+This plugin provides a liquid drop to access various attributes.
+
+The main plugin drop is access like this:
+@{{ plugins.visit_counter }}@
+
+It has the following attributes:
+
+* page_count - visit count of the current page
+* site_count - sum of all the pages counts for the current site
+* show_count_link - a url for the plugins engin with will display all page counts

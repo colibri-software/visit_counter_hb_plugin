@@ -1,7 +1,7 @@
 
 module VisitCounterHbPlugin
   class Count
-    include Mongoid::Document
+    include Locomotive::Plugins::Document
 
     field :page_fullpath
     field :count, type: Integer, default: 0
